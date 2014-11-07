@@ -14,7 +14,7 @@ public class Main {
 		try {
 			AppGameContainer app = new AppGameContainer(new Game("test"));
 			app.setDisplayMode(800, 640, false);
-			app.setTargetFrameRate(60);
+			app.setTargetFrameRate(120);
 			app.start();
 		} catch (SlickException e) {
 			e.printStackTrace();

@@ -47,7 +47,7 @@ public class CenaMapa1 extends CenaMapa{
 	
 	public void init(GameContainer gc){
 		try {
-			mapa = new TiledMap("res/mapa1.tmx");
+			mapa = new TiledMap("res/maps/mapa1.tmx");
 		} catch (SlickException e) {
 			e.printStackTrace();
 		}

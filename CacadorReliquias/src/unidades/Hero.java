@@ -21,7 +21,7 @@ public class Hero extends Unidade{
 		vida = 10;
 		
 		try {
-			image = new Image("res/SaraFullSheet.png");
+			image = new Image("res/img/SaraFullSheet.png");
 		} catch (SlickException e) {
 			e.printStackTrace();
 		}

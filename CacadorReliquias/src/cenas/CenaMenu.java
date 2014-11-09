@@ -46,7 +46,7 @@ public class CenaMenu extends Cena{
 	
 	public void init(GameContainer gc){
 		try {
-			menu = new Image("res/Menu_Cacador_Reliquias.png");
+			menu = new Image("res/img/Menu_Cacador_Reliquias.png");
 		} catch (SlickException e) {
 			e.printStackTrace();
 		}

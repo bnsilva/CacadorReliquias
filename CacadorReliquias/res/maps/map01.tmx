@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="tileset04" tilewidth="32" tileheight="32">
-  <image source="../../../Art/caçador (32x32)/Done/Tilesets/tileset04.png" width="96" height="160"/>
+  <image source="tileset.png" width="96" height="160"/>
  </tileset>
  <layer name="chao" width="25" height="20">
   <data encoding="base64" compression="zlib">
@@ -10,7 +10,7 @@
  </layer>
  <layer name="paredes" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJy1U9sNgzAMNA3KB1KVFRmlo3SUjNbQYnq4jmOgsRRZJNh35wdRf0tEj1vxvU7JT2NnDaOCMVzkjDlCBeOKRaJs6Yir9/QnCL7Wf4gh/b9Mw2C9kqOsdUsX34laZYtP692jA3K97czeJNrPlKJjuzvL2zFXGTHYJK+BfusfjBjGKPnnSWBEOm5aTE3HwuNOx/ccY7R+IK6Xo+eNMXCumUv6/rPpw3wyprYjay9yBT9b3mtYF2WuJf/dt9z3JQ53CvvRmh+p09qb2n5MH//sdUr++QVhiiOz
+   eJy1U20OgzAIxdX0h8niFT3KjrKj9GirThb2BhR1JWmIrfAeH4+ov81Ej1v1vU7NT2PnGkYFY7jIWeZIBsYVy0TFqyPvPjKfBHy9/yQG+n+ZhsH1IkfsdasuvoNeFY9P6z1Sh8i12RndzPS9U0odn7uzvAN7VSQGG/Ia6Lf/yYlhjJp/mQAj03HTYqw6Vh53Oq5zGaPNQ+JGOUbeGEPuNXNhPSi7sBnGWBrZZ1EM/OL5qMm+4I7gnuE36n2Nk5qS82jtD9bp6cbSx/T2z16n5l9eCosi9w==
   </data>
  </layer>
  <layer name="cenario" width="25" height="20">

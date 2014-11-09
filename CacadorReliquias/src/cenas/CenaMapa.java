@@ -32,22 +32,22 @@ public abstract class CenaMapa extends Cena {
 		nivel ++;
 		if(nivel == 1){
 			try {
-				e1 = new Image("res/escuro1.png");
+				e1 = new Image("res/img/escuro1.png");
 			} catch (SlickException e) {
 				e.printStackTrace();
 			}
-		}else if(nivel == 2){
+/*		}else if(nivel == 2){
 			try {
-				e1 = new Image("res/escuro2.png");
+				e1 = new Image("res/img/escuro2.png");
 			} catch (SlickException e) {
 				e.printStackTrace();
 			}
 		}else if(nivel == 3){
 			try {
-				e1 = new Image("res/escuro3.png");
+				e1 = new Image("res/img/escuro3.png");
 			} catch (SlickException e) {
 				e.printStackTrace();
-			}
+			}*/
 		}
 	}
 	

@@ -77,7 +77,7 @@ public abstract class CenaMapa extends Cena {
 			
 			customUpdate(gc, t);
 			hero.isColide(monstros);
-			interJog.update(hero.getVida(), t);
+			interJog.update(hero, t);
 			
 			if(hero.isDead()){
 				this.setState(STATE.INVISIBLE);

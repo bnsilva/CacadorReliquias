@@ -13,6 +13,7 @@ import org.newdawn.slick.tiled.TiledMap;
 
 public class Hero extends Unidade{
 	private int vida;
+	private int reliquias;
 	private Animacao sprite, up, left, down, right;
 	
 	public Hero(int posx, int posy) {
@@ -108,6 +109,9 @@ public class Hero extends Unidade{
 				!gc.getInput().isKeyDown(Input.KEY_LEFT)){
 			sprite.stop();
 		}
+		if (gc.getInput().isKeyDown(Input.KEY_B)){
+			abrirBau(map);
+		}
 	}
 	
 	public void isColide(ArrayList<Monstro> monstros) {
@@ -139,9 +143,24 @@ public class Hero extends Unidade{
 		if(vida > 0) return false;
 		else return true;
 	}
+	
+	public void abrirBau(TiledMap map){
+		int chestLayer = map.getLayerIndex("Chest");
+		map.getTileId(0, 0, chestLayer);
+		
+		if ( map.getTileId((int) (posx/32), (int) ((posy)/32), chestLayer) != 0){
+			reliquias++;
+			map.setTileId((int) (posx/32),  (int) ((posy)/32), chestLayer, 0);
+		}
+		
+	}
+
+	public int getReliquias() {
+		return reliquias;
+	}
 
 	public int getVida() {
 		return vida;
 	}
-
+	
 }

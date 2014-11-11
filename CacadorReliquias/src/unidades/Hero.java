@@ -18,7 +18,7 @@ public class Hero extends Unidade{
 	public Hero(int posx, int posy) {
 		super(posx, posy);
 		speed = 2;
-		vida = 10;
+		vida = 5;
 		
 		try {
 //			image = new Image("res/img/SaraFullSheet.png");

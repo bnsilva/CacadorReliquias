@@ -20,10 +20,10 @@ public class Monstro extends Unidade{
 		
 		this.tipo = tipo;
 		if (tipo == 0){
-			speed = 1;
+			speed = 2;
 		}
 		else{
-			speed = 1;
+			speed = 2;
 		}
 		
 //		monstro = new Rectangle(posx, posy, 16, 16);
@@ -73,8 +73,7 @@ public class Monstro extends Unidade{
 		
 		if(tipo == 0){
 			posx += speed;
-//			monstro = left;
-			if ( map.getTileId((int) ((posx)/32), (int) (posy/32), objectLayer) != 0){
+			if ( map.getTileId((int) ((posx+20)/32), (int) (posy/32), objectLayer) != 0){
 				posx -= speed;
 				mudaSpeed();
 			}

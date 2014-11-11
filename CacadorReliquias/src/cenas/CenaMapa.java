@@ -18,8 +18,9 @@ public abstract class CenaMapa extends Cena {
 	protected int nMapa;
 	protected int teleportx, teleporty;
 	
-	protected TiledMap mapa;
+	protected TiledMap mapa1;
 	protected TiledMap mapa2;
+	protected TiledMap mapa3;
 	protected Image e1;
 	protected InterfaceJogador interJog;
 	

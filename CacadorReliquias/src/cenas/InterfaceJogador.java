@@ -7,7 +7,7 @@ public class InterfaceJogador {
 	public static int time;
 	private String tempo;
 	private int vida;
-	static final int VIDA_MAX = 10;
+	static final int VIDA_MAX = 5;
 	
 	InterfaceJogador(){
 		tempo = new String("TEMPO %02d : %02d : %03d");

@@ -37,7 +37,7 @@ public class CenaMapa1 extends CenaMapa{
 		}
 		 
 		hero.render(g);
-//		e1.drawCentered(hero.getPosx(), hero.getPosy()-10);
+		e1.drawCentered(hero.getPosx(), hero.getPosy()-10);
 		interJog.render(g);
 		g.setColor(Color.red);
 		g.draw(r);

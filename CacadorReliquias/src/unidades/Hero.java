@@ -55,7 +55,7 @@ public class Hero extends Unidade{
 		right.getAnimation(image, 3, 1, 1, 32, 32, 1, 100, 1.0f);
 		
 		sprite = new Animacao();
-		sprite = right;
+		sprite = down;
 	}
 
 	@Override
@@ -90,7 +90,7 @@ public class Hero extends Unidade{
 			posy += speed;
 			sprite = down;
 			sprite.start();
-			if ( map.getTileId((int) (posx/32), (int) ((posy+5)/32), objectLayer) != 0){
+			if ( map.getTileId((int) (posx/32), (int) ((posy)/32), objectLayer) != 0){
 				posy -= speed;		
 			}
 		}
@@ -98,7 +98,7 @@ public class Hero extends Unidade{
 			posy -= speed;
 			sprite = up;
 			sprite.start();
-			if ( map.getTileId((int) (posx/32), (int) ((posy-5)/32), objectLayer) != 0){
+			if ( map.getTileId((int) (posx/32), (int) ((posy-10)/32), objectLayer) != 0){
 				posy += speed;
 			}
 		}
@@ -112,14 +112,25 @@ public class Hero extends Unidade{
 	
 	public void isColide(ArrayList<Monstro> monstros) {
 		for (int i = 0; i < monstros.size(); i++){
-			if (posx+5 > monstros.get(i).getPosx() && posx-5 < monstros.get(i).getPosx() + 16
-					&& posy+10 > monstros.get(i).getPosy() && posy-10 < monstros.get(i).getPosy()+16){
+			if (posx+5 > monstros.get(i).getPosx() && posx-5 < monstros.get(i).getPosx() + 32
+					&& posy-5 > monstros.get(i).getPosy() && posy < monstros.get(i).getPosy()+32){
 				vida--;
 				monstros.get(i).mudaSpeed();
-				if(posx<monstros.get(i).getPosx()) posx-=16;
-				if(posx>monstros.get(i).getPosx()) posx+=16;
-				if(sprite.equals(up)) posy-=16;
-				if(sprite.equals(down)) posy-=16;
+				
+				if (sprite == up){
+					posy +=16;
+				} else if (sprite == down){
+					posy -=16;
+				} else if (sprite == right){
+					posx -=16;
+				} else if (sprite == left) {
+					posx +=16;
+				}
+				
+//				if(posx<monstros.get(i).getPosx()) posx-=16;
+//				if(posx>monstros.get(i).getPosx()) posx+=16;
+//				if(sprite.equals(up)) posy-=16;
+//				if(sprite.equals(down)) posy-=16;
 			}
 		}
 	}

@@ -91,8 +91,6 @@ public abstract class CenaMapa extends Cena {
 				CenaMapa.nivel++;
 				Game.gerenciador.removerCena(this);
 				Game.gerenciador.adicionarCena(new CenaMapa1());
-
-				
 			}
 		}
 	}

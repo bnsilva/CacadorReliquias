@@ -37,7 +37,7 @@ public class CenaMapa1 extends CenaMapa{
 		}
 		 
 		hero.render(g);
-		e1.drawCentered(hero.getPosx(), hero.getPosy()-10);
+//		e1.drawCentered(hero.getPosx(), hero.getPosy()-10);
 		interJog.render(g);
 		g.setColor(Color.red);
 		g.draw(r);
@@ -69,12 +69,12 @@ public class CenaMapa1 extends CenaMapa{
 			e.printStackTrace();
 		}
 		
-		monstros = new ArrayList<Monstro> ();
-		monstros.add(new Monstro(32*7, 32*4, 0));
+/*		monstros = new ArrayList<Monstro> ();
+		monstros.add(new Monstro(32*7, 32*4 + 10, 0));
 		monstros.add(new Monstro(32*7, 32*14, 0));
-		monstros.add(new Monstro(32*5, 32*6, 1));
-		monstros.add(new Monstro(32*13, 32*14, 1));
-		
+		monstros.add(new Monstro(32*5, 32*7, 1));
+		monstros.add(new Monstro(32*13, 32*15, 1));
+*/		
 		hero = new Hero(32*2, 32*4);
 		
 		if (nivel >= 4){
@@ -87,14 +87,32 @@ public class CenaMapa1 extends CenaMapa{
 			teleportx = 0;
 			teleporty = 32*17;
 			
+			monstros = new ArrayList<Monstro> ();
+			monstros.add(new Monstro(32*7, 32*4 + 10, 0));
+			monstros.add(new Monstro(32*7, 32*14, 0));
+			monstros.add(new Monstro(32*5, 32*7, 1));
+			monstros.add(new Monstro(32*13, 32*15, 1));
+			
 		} else if(nivel == 2){
 			teleportx = 32*24;
 			teleporty = 32*17;
+			
+			monstros = new ArrayList<Monstro> ();
+			monstros.add(new Monstro(32*7, 32*4 + 10, 0));
+			monstros.add(new Monstro(32*7, 32*16, 0));
+			monstros.add(new Monstro(32*23, 32*16, 1));
+			monstros.add(new Monstro(32*13, 32*15, 1));
 		}
 		
 		else if(nivel == 3){
 			teleportx = 32*24;
 			teleporty = 32*9;
+			
+			monstros = new ArrayList<Monstro> ();
+			monstros.add(new Monstro(32*7, 32*4 + 10, 0));
+			monstros.add(new Monstro(32*12, 32*18, 0));
+			monstros.add(new Monstro(32*23, 32*16, 1));
+			monstros.add(new Monstro(32*17, 32*15, 1));
 		}
 		
 		r = new Rectangle(teleportx, teleporty, 32, 32);

@@ -30,6 +30,7 @@ public class CenaMenu extends Cena{
 	protected void customUpdate(GameContainer gc, int t){
 		if(gc.getInput().isKeyPressed(Input.KEY_SPACE)){
 			Game.gerenciador.adicionarCena(new CenaMapa1());
+			CenaMapa.reiniciarNivel();
 			Game.gerenciador.removerCena(this);
 		}
 		

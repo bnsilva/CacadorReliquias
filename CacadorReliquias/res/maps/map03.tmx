@@ -6,19 +6,27 @@
  <tileset firstgid="10" name="Tile02" tilewidth="32" tileheight="32">
   <image source="Tile02.png" width="128" height="160"/>
  </tileset>
+ <tileset firstgid="30" name="Chests" tilewidth="32" tileheight="32">
+  <image source="../../../../../Desktop/Misc.png" width="96" height="96"/>
+ </tileset>
  <layer name="Background" width="25" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+NgYGDgoDFmH8WjeBSP4lE8ikcxTTEAnZIR6dAHAAA=
+   H4sIAAAAAAAAA+NgYGDgoDFmH8WjeBSP4lE8ikcxTTEAnZIR6dAHAAA=
   </data>
  </layer>
  <layer name="Objects" width="25" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC7VU0QrDIAx0k76ulA4Kg/3/b04fQo/jLnYUA8EaTXKXpJYyX15NnxN1a7pP5rCLHA/AUIUtw9tlpVXluIPXrfHNfUEOIz71Yo67fML/SHLEWfCptFfYu2Dd8f5STn6Mf7RnUbj5PGwr2BQ+14uN/Dhe2Lr/Qj5cQyeON+Ya3cF+qFnjPmIfIo6r1b/zlmF1sTI+qh8ZVlU/3DMvhz/DymcHrRyL3zNXW/Veuflh7k6uvCU8/5XuuvOYMeQf/4L7z1lG+EfS43+avifqt+kPeyFhZ9AHAAA=
+   H4sIAAAAAAAAA7VU0QrDIAx0k76ulA4Kg/3/b04fQo/jLnYUA8EaTXKXpJYyX15NnxN1a7pP5rCLHA/AUIUtw9tlpVXluIPXrfHNfUEOIz71Yo67fML/SHLEWfCptFfYu2Dd8f5STn6Mf7RnUbj5PGwr2BQ+14uN/Dhe2Lr/Qj5cQyeON+Ya3cF+qFnjPmIfIo6r1b/zlmF1sTI+qh8ZVlU/3DMvhz/DymcHrRyL3zNXW/Veuflh7k6uvCU8/5XuuvOYMeQf/4L7z1lG+EfS43+avifqt+kPeyFhZ9AHAAA=
   </data>
  </layer>
  <layer name="Det" width="25" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgoB9gI1IdC5XNoyUg1q3DBYwE/w52P1KS7gdDniEWDCW3DvY0M5wAobCmdj0zlAAA3ecPGtAHAAA=
+   H4sIAAAAAAAAA2NgoB9gI1IdC5XNoyUg1q3DBYwE/w52P1KS7gdDniEWDCW3DvY0M5wAobCmdj0zlAAA3ecPGtAHAAA=
+  </data>
+ </layer>
+ <layer name="Chest" width="25" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAWjYGgB1YF2AA3BUPLbUHLrcALKA+2AUUASoGd8AQBTg1b70AcAAA==
   </data>
  </layer>
 </map>

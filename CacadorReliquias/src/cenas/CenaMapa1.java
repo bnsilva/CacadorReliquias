@@ -19,7 +19,6 @@ public class CenaMapa1 extends CenaMapa{
 	
 	CenaMapa1(){
 		super();
-		
 	}
 	
 	protected void customRender(GameContainer gc, Graphics g){
@@ -37,7 +36,7 @@ public class CenaMapa1 extends CenaMapa{
 		}
 		 
 		hero.render(g);
-		//e1.drawCentered(hero.getPosx(), hero.getPosy()-10);
+		e1.drawCentered(hero.getPosx(), hero.getPosy()-10);
 		interJog.render(g);
 		g.setColor(Color.red);
 		g.draw(r);
@@ -68,13 +67,7 @@ public class CenaMapa1 extends CenaMapa{
 		} catch (SlickException e) {
 			e.printStackTrace();
 		}
-		
-/*		monstros = new ArrayList<Monstro> ();
-		monstros.add(new Monstro(32*7, 32*4 + 10, 0));
-		monstros.add(new Monstro(32*7, 32*14, 0));
-		monstros.add(new Monstro(32*5, 32*7, 1));
-		monstros.add(new Monstro(32*13, 32*15, 1));
-*/		
+
 		hero = new Hero(32*2, 32*4);
 		
 		if (nivel >= 4){
@@ -84,6 +77,8 @@ public class CenaMapa1 extends CenaMapa{
 		}
 		
 		if (nivel == 1){
+			hero.zerarReliquias();
+			
 			teleportx = 0;
 			teleporty = 32*17;
 			

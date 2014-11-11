@@ -17,11 +17,12 @@ public class InterfaceJogador {
 	
 	public void render(Graphics g){
 		g.setColor(Color.green);
-		g.fillRect(300, 10, vida*50, 10);
+		g.fillRect(300, 10, vida*50, 15);
 		g.setColor(Color.white);
-		g.drawRect(300, 10, VIDA_MAX*50, 10);
+		g.drawRect(300, 10, VIDA_MAX*50, 15);
 		
-		g.drawString("Reliquias:  " + reliquias, 50, 10);
+		g.drawString("Reliquias:  " + reliquias + "/15", 30, 5);
+		g.drawString("Nivel:  " + CenaMapa.nivel + "/3", 30, 25);
 		g.drawString("Vida:  ", 250, 10);
 		g.drawString(String.format(tempo, time/60000%60, time/1000%60, time%1000), 600, 10);
 	}

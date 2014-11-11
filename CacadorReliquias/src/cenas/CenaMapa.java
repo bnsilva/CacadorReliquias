@@ -31,28 +31,14 @@ public abstract class CenaMapa extends Cena {
 		super();
 		interJog = new InterfaceJogador();
 		
-//		nivel ++;
 		
-//		if(nivel == 1){
 			try {
 				e1 = new Image("res/img/escuro1.png");
 			} catch (SlickException e) {
 				e.printStackTrace();
 			}
-/*		}else if(nivel == 2){
-			try {
-				e1 = new Image("res/img/escuro2.png");
-			} catch (SlickException e) {
-				e.printStackTrace();
-			}
-		}else if(nivel == 3){
-			try {
-				e1 = new Image("res/img/escuro3.png");
-			} catch (SlickException e) {
-				e.printStackTrace();
-			}
-		}
-*/	}
+			e1.setAlpha(0.99f);
+	}
 	
 	public void render(GameContainer gc, Graphics g){
 		if(state == STATE.ON){
@@ -93,6 +79,10 @@ public abstract class CenaMapa extends Cena {
 				Game.gerenciador.adicionarCena(new CenaMapa1());
 			}
 		}
+	}
+	
+	public static void reiniciarNivel(){
+		nivel = 1;
 	}
 
 }

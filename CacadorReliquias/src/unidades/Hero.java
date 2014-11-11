@@ -12,8 +12,9 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
 
 public class Hero extends Unidade{
+	private static int reliquias;
+
 	private int vida;
-	private int reliquias;
 	private Animacao sprite, up, left, down, right;
 	
 	public Hero(int posx, int posy) {
@@ -22,7 +23,6 @@ public class Hero extends Unidade{
 		vida = 5;
 		
 		try {
-//			image = new Image("res/img/SaraFullSheet.png");
 			image = new Image("res/img/Char.png");
 		} catch (SlickException e) {
 			e.printStackTrace();
@@ -153,6 +153,10 @@ public class Hero extends Unidade{
 			map.setTileId((int) (posx/32),  (int) ((posy)/32), chestLayer, 0);
 		}
 		
+	}
+	
+	public void zerarReliquias(){
+		reliquias = 0;
 	}
 
 	public int getReliquias() {

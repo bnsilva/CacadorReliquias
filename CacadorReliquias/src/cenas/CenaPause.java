@@ -25,7 +25,8 @@ public class CenaPause extends Cena{
 	
 	protected void customUpdate(GameContainer gc, int t){
 		if(gc.getInput().isKeyPressed(Input.KEY_SPACE)){
-			Game.gerenciador.removerCena(this);	
+			Game.gerenciador.removerCena(this);
+			
 		}
 	}
 	

@@ -5,6 +5,7 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
+import cenas.CenaMapa;
 import cenas.CenaMenu;
 import cenas.GerenciadorCena;
 
@@ -19,6 +20,7 @@ public class Game extends BasicGame{
 	public void init(GameContainer gc) throws SlickException {
 		gerenciador = new GerenciadorCena(gc);
 		gerenciador.adicionarCena(new CenaMenu());
+		CenaMapa.nivel = 1;
 	}
 
 	@Override

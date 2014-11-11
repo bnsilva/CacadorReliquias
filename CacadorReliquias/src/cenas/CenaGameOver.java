@@ -27,7 +27,7 @@ public class CenaGameOver extends Cena{
 		if(gc.getInput().isKeyPressed(Input.KEY_SPACE)){
 			Game.gerenciador.adicionarCena(new CenaMenu());
 			Game.gerenciador.removerCena(this);
-			CenaMapa.nivel = 0;
+			CenaMapa.nivel = 1;
 		}
 	}
 	

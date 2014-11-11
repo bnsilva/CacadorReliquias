@@ -21,11 +21,12 @@ public class Hero extends Unidade{
 		vida = 10;
 		
 		try {
-			image = new Image("res/img/SaraFullSheet.png");
+//			image = new Image("res/img/SaraFullSheet.png");
+			image = new Image("res/img/Char.png");
 		} catch (SlickException e) {
 			e.printStackTrace();
 		}
-		
+/*		
 		up = new Animacao();
 		up.getAnimation(image, 8, 9, 1, 64, 64, 9, 100, 0.5f);
 		
@@ -40,6 +41,21 @@ public class Hero extends Unidade{
 		
 		sprite = new Animacao();
 		sprite = right;
+*/		
+		up = new Animacao();
+		up.getAnimation(image, 4, 1, 1, 32, 32, 1, 100, 1.0f);
+		
+		down = new Animacao();
+		down.getAnimation(image, 1, 1, 1, 32, 32, 1, 100, 1.0f);
+		
+		left = new Animacao();
+		left.getAnimation(image, 2, 1, 1, 32, 32, 1, 100, 1.0f);
+		
+		right = new Animacao();
+		right.getAnimation(image, 3, 1, 1, 32, 32, 1, 100, 1.0f);
+		
+		sprite = new Animacao();
+		sprite = right;
 	}
 
 	@Override
@@ -51,6 +67,7 @@ public class Hero extends Unidade{
 	@Override
 	public void update(GameContainer gc, TiledMap map) {
 		int objectLayer = map.getLayerIndex("Objects");
+
 		map.getTileId(0, 0, objectLayer);
 		
 		if (gc.getInput().isKeyDown(Input.KEY_RIGHT)){

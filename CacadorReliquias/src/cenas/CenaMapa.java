@@ -19,6 +19,7 @@ public abstract class CenaMapa extends Cena {
 	protected int teleportx, teleporty;
 	
 	protected TiledMap mapa;
+	protected TiledMap mapa2;
 	protected Image e1;
 	protected InterfaceJogador interJog;
 	
@@ -29,8 +30,9 @@ public abstract class CenaMapa extends Cena {
 		super();
 		interJog = new InterfaceJogador();
 		
-		nivel ++;
-		if(nivel == 1){
+//		nivel ++;
+		
+//		if(nivel == 1){
 			try {
 				e1 = new Image("res/img/escuro1.png");
 			} catch (SlickException e) {
@@ -47,9 +49,9 @@ public abstract class CenaMapa extends Cena {
 				e1 = new Image("res/img/escuro3.png");
 			} catch (SlickException e) {
 				e.printStackTrace();
-			}*/
+			}
 		}
-	}
+*/	}
 	
 	public void render(GameContainer gc, Graphics g){
 		if(state == STATE.ON){
@@ -85,7 +87,11 @@ public abstract class CenaMapa extends Cena {
 			if(hero.getPosx() > teleportx && hero.getPosx() < teleportx+32
 					&& hero.getPosy() > teleporty && hero.getPosy() < teleporty+32){
 				this.setState(STATE.INVISIBLE);
-				Game.gerenciador.adicionarCena(new CenaGameOver());
+				CenaMapa.nivel++;
+				Game.gerenciador.removerCena(this);
+				Game.gerenciador.adicionarCena(new CenaMapa1());
+
+				
 			}
 		}
 	}

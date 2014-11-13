@@ -6,8 +6,8 @@
  <tileset firstgid="10" name="Tile02" tilewidth="32" tileheight="32">
   <image source="Tile02.png" width="128" height="160"/>
  </tileset>
- <tileset firstgid="30" name="Chests" tilewidth="32" tileheight="32">
-  <image source="../../../../../Desktop/Misc.png" width="96" height="96"/>
+ <tileset firstgid="30" name="Misc" tilewidth="32" tileheight="32">
+  <image source="Misc.png" width="96" height="96"/>
  </tileset>
  <layer name="Background" width="25" height="20">
   <data encoding="base64" compression="gzip">
@@ -26,7 +26,7 @@
  </layer>
  <layer name="Chest" width="25" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NgGAXDFSgPtANGAVYgP9AOGAV0A6NxPfQAOeWmItVdQR4AANugXFLQBwAA
+   H4sIAAAAAAAAA2NgGAXDFSgPtANGAVYgP9AOGCFgMKT/0bge3mAwpDFkAABCHUKk0AcAAA==
   </data>
  </layer>
 </map>

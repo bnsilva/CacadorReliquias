@@ -4,19 +4,15 @@ import java.util.ArrayList;
 
 import jogo.Game;
 
-import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.tiled.TiledMap;
 
 import unidades.Hero;
 import unidades.Monstro;
 
 public class CenaMapa1 extends CenaMapa{
-	private Rectangle r ;
-	
 	CenaMapa1(){
 		super();
 	}
@@ -38,8 +34,6 @@ public class CenaMapa1 extends CenaMapa{
 		hero.render(g);
 		e1.drawCentered(hero.getPosx(), hero.getPosy()-10);
 		interJog.render(g);
-		g.setColor(Color.red);
-		g.draw(r);
 		
 	}
 	
@@ -109,8 +103,6 @@ public class CenaMapa1 extends CenaMapa{
 			monstros.add(new Monstro(32*23, 32*16, 1));
 			monstros.add(new Monstro(32*17, 32*15, 1));
 		}
-		
-		r = new Rectangle(teleportx, teleporty, 32, 32);
 		
 	}
 	

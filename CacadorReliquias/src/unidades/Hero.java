@@ -27,22 +27,7 @@ public class Hero extends Unidade{
 		} catch (SlickException e) {
 			e.printStackTrace();
 		}
-/*		
-		up = new Animacao();
-		up.getAnimation(image, 8, 9, 1, 64, 64, 9, 100, 0.5f);
-		
-		left = new Animacao();
-		left.getAnimation(image, 9, 9, 1, 64, 64, 9, 100, 0.5f);
-		
-		down = new Animacao();
-		down.getAnimation(image, 10, 9, 1, 64, 64, 9, 100, 0.5f);
-		
-		right = new Animacao();
-		right.getAnimation(image, 11, 9, 1, 64, 64, 9, 100, 0.5f);
-		
-		sprite = new Animacao();
-		sprite = right;
-*/		
+
 		up = new Animacao();
 		up.getAnimation(image, 4, 1, 1, 32, 32, 1, 100, 1.0f);
 		
@@ -122,19 +107,14 @@ public class Hero extends Unidade{
 				monstros.get(i).mudaSpeed();
 				
 				if (sprite == up){
-					posy +=16;
+					posy +=11;
 				} else if (sprite == down){
-					posy -=16;
+					posy -=11;
 				} else if (sprite == right){
-					posx -=16;
+					posx -=11;
 				} else if (sprite == left) {
-					posx +=16;
+					posx +=11;
 				}
-				
-//				if(posx<monstros.get(i).getPosx()) posx-=16;
-//				if(posx>monstros.get(i).getPosx()) posx+=16;
-//				if(sprite.equals(up)) posy-=16;
-//				if(sprite.equals(down)) posy-=16;
 			}
 		}
 	}
@@ -159,7 +139,7 @@ public class Hero extends Unidade{
 		reliquias = 0;
 	}
 
-	public int getReliquias() {
+	public static int getReliquias() {
 		return reliquias;
 	}
 

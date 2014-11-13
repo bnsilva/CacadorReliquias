@@ -29,7 +29,7 @@ public class InterfaceJogador {
 	
 	public void update(Hero hero, int delta){
 		this.vida = hero.getVida();
-		this.reliquias = hero.getReliquias();
+		this.reliquias = Hero.getReliquias();
 		time += delta;
 	}
 	

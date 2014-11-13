@@ -75,8 +75,13 @@ public abstract class CenaMapa extends Cena {
 					&& hero.getPosy() > teleporty && hero.getPosy() < teleporty+32){
 				this.setState(STATE.INVISIBLE);
 				CenaMapa.nivel++;
+				if(nivel < 4){
+					Game.gerenciador.adicionarCena(new CenaMapa1());
+				}
+				else{
+					Game.gerenciador.adicionarCena(new CenaFinal());
+				}
 				Game.gerenciador.removerCena(this);
-				Game.gerenciador.adicionarCena(new CenaMapa1());
 			}
 		}
 	}

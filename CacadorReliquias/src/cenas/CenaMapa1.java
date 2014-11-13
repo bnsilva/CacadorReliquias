@@ -6,6 +6,7 @@ import jogo.Game;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Music;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
 
@@ -58,9 +59,12 @@ public class CenaMapa1 extends CenaMapa{
 			mapa1 = new TiledMap("res/maps/map01.tmx");
 			mapa2 = new TiledMap("res/maps/map02.tmx");
 			mapa3 = new TiledMap("res/maps/map03.tmx");
+			music = new Music("res/bgm/Pol-miracle-park-short.wav");
 		} catch (SlickException e) {
 			e.printStackTrace();
 		}
+		
+		music.loop(0.9f, 0.3f);
 
 		hero = new Hero(32*2, 32*4);
 		

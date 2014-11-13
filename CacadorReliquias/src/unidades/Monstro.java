@@ -10,7 +10,6 @@ import org.newdawn.slick.tiled.TiledMap;
 
 public class Monstro extends Unidade{
 	private int tipo;
-//	private Rectangle monstro;
 	private Animacao monstro, up, left, right;
 
 	public Monstro(int posx, int posy, int tipo) {
@@ -56,11 +55,6 @@ public class Monstro extends Unidade{
 			if ( map.getTileId((int) ((posx+16)/32), (int) (posy/32), objectLayer) != 0){
 				posx -= speed;
 				mudaSpeed();
-				
-				if (monstro == right){
-					monstro = left;
-				} else monstro = right;
-				
 			}
 		}
 		else{
@@ -76,5 +70,7 @@ public class Monstro extends Unidade{
 	
 	public void mudaSpeed(){
 		speed *= -1;
+		if(monstro == right) monstro = left;
+		else if(monstro == left) monstro = right;
 	}
 }

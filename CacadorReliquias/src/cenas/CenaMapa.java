@@ -10,6 +10,7 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
+import org.newdawn.slick.Music;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
 
@@ -26,6 +27,8 @@ public abstract class CenaMapa extends Cena {
 	
 	protected ArrayList<Monstro> monstros;
 	protected Hero hero;
+	
+	protected Music music;
 	
 	public CenaMapa(){
 		super();

@@ -9,6 +9,7 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.Sound;
 import org.newdawn.slick.tiled.TiledMap;
 
 public class Hero extends Unidade{
@@ -105,7 +106,12 @@ public class Hero extends Unidade{
 					&& posy-5 > monstros.get(i).getPosy() && posy < monstros.get(i).getPosy()+32){
 				vida--;
 				monstros.get(i).mudaSpeed();
-				
+				try {
+					Sound hit = new Sound("res/sfx/NFF-hit.wav");
+					hit.play();
+				} catch (SlickException e) {
+					e.printStackTrace();
+				}
 				if (sprite == up){
 					posy +=11;
 				} else if (sprite == down){
@@ -129,6 +135,14 @@ public class Hero extends Unidade{
 		map.getTileId(0, 0, chestLayer);
 		
 		if ( map.getTileId((int) (posx/32), (int) ((posy)/32), chestLayer) != 0){
+			try {
+				Sound bau = new Sound("res/sfx/NFF-bau.wav");
+				Sound reliq = new Sound("res/sfx/reliquia.wav");
+				bau.play();
+				reliq.play();
+			} catch (SlickException e) {
+				e.printStackTrace();
+			}
 			reliquias++;
 			map.setTileId((int) (posx/32),  (int) ((posy)/32), chestLayer, 0);
 		}
